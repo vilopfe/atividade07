@@ -1,9 +1,8 @@
-package com.atividade05.repository;
+package com.atividade06.repository;
 
-import com.atividade05.entity.Funcionario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.atividade05.entity.Departamento;
+import com.atividade06.entity.Departamento;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

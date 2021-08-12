@@ -1,10 +1,9 @@
-package com.atividade05.service;
+package com.atividade06.service;
 
-import com.atividade05.entity.Departamento;
-import com.atividade05.entity.Funcionario;
-import com.atividade05.repository.FuncionarioRepository;
+import com.atividade06.entity.Departamento;
+import com.atividade06.entity.Funcionario;
+import com.atividade06.repository.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

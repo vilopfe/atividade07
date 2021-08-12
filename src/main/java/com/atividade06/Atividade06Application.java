@@ -1,10 +1,9 @@
-package com.atividade05;
+package com.atividade06;
 
-import java.util.List;
 import java.util.Optional;
 
-import com.atividade05.entity.Funcionario;
-import com.atividade05.service.FuncionarioService;
+import com.atividade06.entity.Funcionario;
+import com.atividade06.service.FuncionarioService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -14,16 +13,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.atividade05.entity.Departamento;
-import com.atividade05.service.DepartamentoService;
+import com.atividade06.entity.Departamento;
+import com.atividade06.service.DepartamentoService;
 
 @SpringBootApplication
-public class Atividade05Application {
+public class Atividade06Application {
 	
-	private static final Logger log = LoggerFactory.getLogger(Atividade05Application.class);
+	private static final Logger log = LoggerFactory.getLogger(com.atividade06.Atividade06Application.class);
 
 	public static void main(String[] args) {
-		SpringApplication.run(Atividade05Application.class, args);
+		SpringApplication.run(com.atividade06.Atividade06Application.class, args);
 	}
 	
 	@Bean

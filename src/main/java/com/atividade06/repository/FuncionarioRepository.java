@@ -1,12 +1,10 @@
-package com.atividade05.repository;
+package com.atividade06.repository;
 
-import com.atividade05.entity.Departamento;
-import com.atividade05.entity.Funcionario;
+import com.atividade06.entity.Departamento;
+import com.atividade06.entity.Funcionario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.stereotype.Repository;
 
-import java.util.Date;
 import java.util.List;
 
 public interface FuncionarioRepository extends JpaRepository<Funcionario,Long> {
