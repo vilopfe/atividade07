@@ -12,6 +12,7 @@ import lombok.Data;
 @Entity
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
 public class Departamento extends AbstractPersistable<Long> {
 

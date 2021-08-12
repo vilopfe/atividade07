@@ -58,16 +58,19 @@ public class Atividade05Application {
 					.nomeFuncionario("vinicius")
 					.qtdeDependentes(0)
 					.salario(10000.00)
+					.departamento(dep1)
 					.build();
 			Funcionario fun2 = Funcionario.builder()
 			        .nomeFuncionario("fernandez")
 					.qtdeDependentes(2)
 					.salario(1000.00)
+					.departamento(dep2)
 					.build();
 			Funcionario fun3 = Funcionario.builder()
 					.nomeFuncionario("lopes")
 					.qtdeDependentes(3)
 					.salario(2000.00)
+					.departamento(dep1)
 					.build();
 
 			funcionarioService.salvar(fun1);
@@ -100,9 +103,7 @@ public class Atividade05Application {
 
 
 			//findByDepartamento(String departamento);
-			for (Funcionario funcionario : funcionarioService.buscarPorDepartamento(Departamento.builder()
-					.nomeDepartamento("TI")
-					.build())){
+			for (Funcionario funcionario : funcionarioService.buscarPorDepartamento(departamentoService.buscarPorNome("TI").get(0))){
 				log.info("Listar todos os funcionários de um determinado departamento por JPQL via @Query");
 				log.info("--------------------------------");
 				log.info(funcionario.toString());
@@ -170,7 +171,7 @@ public class Atividade05Application {
 			log.info("");
 
 			//findByNomeLike(String caracter);
-			for (Funcionario funcionario : funcionarioService.buscarPorNomeCom("V")) {
+			for (Funcionario funcionario : funcionarioService.buscarPorNomeCom("vinicius")) {
 				log.info("Alterar a classe Funcionario e criar uma consulta para listar os funcionários que\n" +
 						"contenham em qualquer parte do seu nome um determinado nome por\n" +
 						"@NamedNativeQuery.");

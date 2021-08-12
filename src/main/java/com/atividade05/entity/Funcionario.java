@@ -11,6 +11,7 @@ import lombok.Data;
 
 @Entity
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Builder
 @Table(name = "FUNCIONARIO")
@@ -18,8 +19,8 @@ import lombok.Data;
         name = "Funcionario.byDependentes",
         query = "from Funcionario f where f.qtdeDependentes =?1")
 @NamedNativeQuery(
-        name = "Funcionario.byNomeLike",
-        query = "select * from Funcionario where nomeFuncionario like ?1",
+        name = "findByNomeFuncionarioContaining",
+        query = "SELECT * FROM FUNCIONARIO WHERE NOME_FUNCIONARIO LIKE ?1",
         resultClass = Funcionario.class)
 
 public class Funcionario extends AbstractPersistable<Long> {

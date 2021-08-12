@@ -39,7 +39,7 @@ public class FuncionarioService {
     public List<Funcionario> buscarPorSalarioMaiorQue(Double salario) {return funcionarioRepository.findBySalarioGreater(salario);}
     public List<Funcionario> buscarPorSalarioIgual(Double salario) {return funcionarioRepository.findBySalario(salario);}
     public List<Funcionario> buscarPorDependentesIgual(Integer qtdeDependentes) {return funcionarioRepository.findByDependentes(qtdeDependentes);}
-    public List<Funcionario> buscarPorNomeCom(String caracter) {return funcionarioRepository.findByNomeLike(caracter);}
+    public List<Funcionario> buscarPorNomeCom(String caracter) {return funcionarioRepository.findByNomeFuncionarioContaining(caracter);}
 
 }
 

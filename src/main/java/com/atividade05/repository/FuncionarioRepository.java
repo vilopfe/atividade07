@@ -23,9 +23,8 @@ public interface FuncionarioRepository extends JpaRepository<Funcionario,Long> {
     List<Funcionario> findBySalario(Double salario);
     @Query(name="Funcionario.byDependentes")
     List<Funcionario> findByDependentes(Integer qtdeDependentes);
-    String caracter = "v";
-    @Query(name="Funcionario.byNomeLike")
-    List<Funcionario> findByNomeLike(String caracter);
+    @Query(name="findByNomeFuncionarioContaining")
+    List<Funcionario> findByNomeFuncionarioContaining(String caracter);
 
 
 }
