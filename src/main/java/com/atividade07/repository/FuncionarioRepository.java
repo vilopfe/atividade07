@@ -1,9 +1,10 @@
-package com.atividade06.repository;
+package com.atividade07.repository;
 
-import com.atividade06.entity.Departamento;
-import com.atividade06.entity.Funcionario;
+import com.atividade07.entity.Departamento;
+import com.atividade07.entity.Funcionario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.jpa.repository.query.Procedure;
 
 import java.util.List;
 
@@ -23,6 +24,12 @@ public interface FuncionarioRepository extends JpaRepository<Funcionario,Long> {
     List<Funcionario> findByDependentes(Integer qtdeDependentes);
     @Query(name="findByNomeFuncionarioContaining")
     List<Funcionario> findByNomeFuncionarioContaining(String caracter);
+    //@Procedure("proc_aumento")
+    @Procedure("Funcionario.aumento")
+    String procedureAumento(Integer valor);
+    @Procedure
+    String proc_aumento(Integer valor);
+
 
 
 }

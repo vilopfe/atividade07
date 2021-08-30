@@ -1,9 +1,9 @@
-package com.atividade06;
+package com.atividade07;
 
 import java.util.Optional;
 
-import com.atividade06.entity.Funcionario;
-import com.atividade06.service.FuncionarioService;
+import com.atividade07.entity.Funcionario;
+import com.atividade07.service.FuncionarioService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -13,16 +13,16 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.atividade06.entity.Departamento;
-import com.atividade06.service.DepartamentoService;
+import com.atividade07.entity.Departamento;
+import com.atividade07.service.DepartamentoService;
 
 @SpringBootApplication
-public class Atividade06Application {
+public class Atividade07Application {
 	
-	private static final Logger log = LoggerFactory.getLogger(com.atividade06.Atividade06Application.class);
+	private static final Logger log = LoggerFactory.getLogger(Atividade07Application.class);
 
 	public static void main(String[] args) {
-		SpringApplication.run(com.atividade06.Atividade06Application.class, args);
+		SpringApplication.run(Atividade07Application.class, args);
 	}
 	
 	@Bean
@@ -192,6 +192,9 @@ public class Atividade06Application {
 			log.info("--------------------------------");
 			log.info(departamento.toString());
 			log.info("");
+
+			//atualiza salario
+			funcionarioService.atualizaSalario(1);
 		};
 	}
 }

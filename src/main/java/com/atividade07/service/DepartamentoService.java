@@ -1,4 +1,4 @@
-package com.atividade06.service;
+package com.atividade07.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,8 +6,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.atividade06.entity.Departamento;
-import com.atividade06.repository.DepartamentoRepository;
+import com.atividade07.entity.Departamento;
+import com.atividade07.repository.DepartamentoRepository;
 
 @Service
 public class DepartamentoService {

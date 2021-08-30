@@ -1,8 +1,8 @@
-package com.atividade06.repository;
+package com.atividade07.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.atividade06.entity.Departamento;
+import com.atividade07.entity.Departamento;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;

@@ -1,8 +1,8 @@
-package com.atividade06.service;
+package com.atividade07.service;
 
-import com.atividade06.entity.Departamento;
-import com.atividade06.entity.Funcionario;
-import com.atividade06.repository.FuncionarioRepository;
+import com.atividade07.entity.Departamento;
+import com.atividade07.entity.Funcionario;
+import com.atividade07.repository.FuncionarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +39,8 @@ public class FuncionarioService {
     public List<Funcionario> buscarPorSalarioIgual(Double salario) {return funcionarioRepository.findBySalario(salario);}
     public List<Funcionario> buscarPorDependentesIgual(Integer qtdeDependentes) {return funcionarioRepository.findByDependentes(qtdeDependentes);}
     public List<Funcionario> buscarPorNomeCom(String caracter) {return funcionarioRepository.findByNomeFuncionarioContaining(caracter);}
+    public String atualizaSalario(Integer percentual) {return funcionarioRepository.proc_aumento(percentual);}
+    
 
 }
 
